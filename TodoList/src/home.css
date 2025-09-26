@@ -1,0 +1,93 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../assets/background.jpg');
+  background-position-x: center;
+  background-size: auto;      
+  background-position: center;
+
+
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+
+
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  
+  background-image: url('../assets/background.jpg');
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+
+  min-height: 100vh;   
+  width: 100vw;        
+  box-sizing: border-box; 
+}
+
+.create_form input {
+ 
+  border-bottom: 2px solid black;
+  align-items: center;
+  padding: 10px;
+  width: 300px;
+}
+
+.create_form button {
+  color: white;
+  background-color: rgb(5, 6, 7);
+  padding: 10px;
+  cursor: pointer;
+}
+.task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(22, 154, 49);
+  color: rgb(6, 10, 14);
+  height: 35px;
+  font-size: large;
+  font-style: oblique;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 2px 5px;
+  margin: 10px 0; /* vertical spacing between tasks */
+  border-radius: 4px;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox .icon {
+  color: green;
+  font-size: 18px;
+}
+
+
+.task div span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+.task div .icon {
+  color: blue;
+  margin-left: 5px;
+}
