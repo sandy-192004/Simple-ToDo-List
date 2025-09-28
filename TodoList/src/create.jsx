@@ -1,24 +1,30 @@
 import axios from "axios";
 import { useState } from "react";
 
-function create() {
-  const [task, setTask] = useState();
+function Create({ addTodo }) {
+  const [task, setTask] = useState("");
 
   const handleAdd = async () => {
+    if (!task) return; 
     try {
-      const res = await axios.post("http://localhost:5000/add", { task });
-      console.log( res.data);
+      const res = await axios.post("http://localhost:5000/add", { task, done: false });
+      addTodo(res.data); 
+      setTask(""); 
     } catch (err) {
       console.error(err.message);
     }
   };
 
   return (
-    <div>
-      <input value={task} onChange={(e) => setTask(e.target.value)} placeholder="Enter Task"></input>
+    <div className="create">
+      <input
+        value={task}
+        onChange={(e) => setTask(e.target.value)}
+        placeholder="Enter Task"
+      />
       <button onClick={handleAdd}>Add</button>
     </div>
   );
 }
 
-export default create;
+export default Create;
